@@ -21,6 +21,8 @@ We’ll break down the Terraform code into:
 - eks.tf: EKS cluster creation.
 - workers.tf: Worker node group configuration.
 - outputs.tf: Output the necessary details like the cluster name and kubeconfig.
+- iam-cluster.tf: Create IAM policy for cluster.
+- iam-worker.tf: Create IAM policy for worker node.
 
 ### 4. Configure kubectl for EKS
 Once the cluster is created, you’ll need to configure kubectl to access your EKS cluster:
