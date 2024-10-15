@@ -21,3 +21,16 @@ We’ll break down the Terraform code into:
 - eks.tf: EKS cluster creation.
 - workers.tf: Worker node group configuration.
 - outputs.tf: Output the necessary details like the cluster name and kubeconfig.
+
+### 4. Configure kubectl for EKS
+- Once the cluster is created, you’ll need to configure kubectl to access your EKS cluster:
+  ```
+  aws eks --region us-west-2 update-kubeconfig --name my-eks-cluster
+  ```
+  
+### 6. Verify the Cluster
+Use kubectl to verify the cluster and nodes:
+  ```
+  kubectl get svc
+  kubectl get nodes
+  ```
