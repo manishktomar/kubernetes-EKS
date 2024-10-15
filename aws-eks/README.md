@@ -23,7 +23,7 @@ We’ll break down the Terraform code into:
 - outputs.tf: Output the necessary details like the cluster name and kubeconfig.
 
 ### 4. Configure kubectl for EKS
-- Once the cluster is created, you’ll need to configure kubectl to access your EKS cluster:
+Once the cluster is created, you’ll need to configure kubectl to access your EKS cluster:
   ```
   aws eks --region us-west-2 update-kubeconfig --name my-eks-cluster
   ```
